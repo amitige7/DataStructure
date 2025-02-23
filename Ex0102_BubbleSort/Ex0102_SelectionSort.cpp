@@ -11,7 +11,7 @@ void PrintHelper(int* arr, int n, int left, int right)
     cout << "Indices: "; // Index
     for (int i = left; i <= right; i++)
         cout << setw(2) << i << " ";
-    // setw() => () ³» int°ª¸¸Å­ÀÇ °ø°£À» °¡Áö°í Ãâ·Â
+    // setw() => () ë‚´ intê°’ë§Œí¼ì˜ ê³µê°„ì„ ê°€ì§€ê³  ì¶œë ¥
     cout << endl;
 
     cout << "Values: " << setw(2);
@@ -54,14 +54,14 @@ int BinarySearch(int* arr, int n, int x)
 }
 int main()
 {
-    // Á¤·ÄµÈ ¹è¿­ (ÀÓÀÇÀÇ ¹è¿­ »ç¿ë °¡´É, ¿©±â¼­´Â µğ¹ö±ë ÆíÀÇ¸¦ À§ÇØ index¿Í °°Àº °ª)
+    // ì •ë ¬ëœ ë°°ì—´ (ì„ì˜ì˜ ë°°ì—´ ì‚¬ìš© ê°€ëŠ¥, ì—¬ê¸°ì„œëŠ” ë””ë²„ê¹… í¸ì˜ë¥¼ ìœ„í•´ indexì™€ ê°™ì€ ê°’)
     int arr[] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
     //int arr[] = { 2, 4, 5, 5, 6, 8, 9, 10, 12, 13 };
     int n = sizeof(arr) / sizeof(arr[0]);
 
     assert(n > 0);
 
-    // Á¤·ÄÀÌ ¾ÈµÈ ¹è¿­Àº ¹Ì¸® Á¤·Ä
+    // ì •ë ¬ì´ ì•ˆëœ ë°°ì—´ì€ ë¯¸ë¦¬ ì •ë ¬
 
     BinarySearch(arr, n, 1);
 
