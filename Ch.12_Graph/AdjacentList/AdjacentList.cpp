@@ -18,7 +18,7 @@ public:
 	struct Node
 	{
 		//Vertex* vertex = nullptr;
-		int vertex = -1; // vertexÀÇ index
+		int vertex = -1; // vertexì˜ index
 		Node* next = nullptr;
 	};
 
@@ -49,8 +49,8 @@ public:
 		n_++;
 	}
 
-	// LinkedList¸¦ Ãß°¡ÇÏ´Â °úÁ¤
-	void InsertEdge(int u, int v) // ¿©±â¼­ u, v´Â ÀÎµ¦½º
+	// LinkedListë¥¼ ì¶”ê°€í•˜ëŠ” ê³¼ì •
+	void InsertEdge(int u, int v) // ì—¬ê¸°ì„œ u, vëŠ” ì¸ë±ìŠ¤
 	{
 		assert(u < n_ && v < n_);
 
@@ -90,7 +90,7 @@ public:
 		cout << endl;
 	}
 
-	void DepthFirstTraversal(int v) // Àç±ÍÈ£Ãâ
+	void DepthFirstTraversal(int v) // ì¬ê·€í˜¸ì¶œ
 	{
 		
 		visited_[v] = true;
@@ -108,7 +108,7 @@ public:
 
 	}
 
-	void IterDFT() //Àç±ÍÈ£Ãâ X
+	void IterDFT() //ì¬ê·€í˜¸ì¶œ X
 	{
 		ResetVisited();
 		int v = 0;
@@ -159,8 +159,9 @@ public:
 				//
 				//
 				//
+				
+				current = current->next;
 			}
-			current = current->next;
 		}
 		cout << "Queue: ";
 		q.Print();
@@ -171,7 +172,7 @@ public:
 	{
 		if (!visited_)
 			visited_ = new bool[max_vertices_];
-		for (int i = 0; i < max_vertices_; i++) visited_[i] = false; // ÃÊ±âÈ­
+		for (int i = 0; i < max_vertices_; i++) visited_[i] = false; // ì´ˆê¸°í™”
 	}
 
 private:
